@@ -29,7 +29,7 @@ let g:airline_powerline_fonts = 1
 set background=dark
 colorscheme solarized
 
-"Emmet settings
+" Emmet settings
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
@@ -71,11 +71,12 @@ else
   set backup		" keep a backup file (restore to previous version)
   set undofile		" keep an undo file (undo changes after closing)
 endif
-set history=50		" keep 50 lines of command line history
+set history=100		" keep 100 lines of command line history
 set ruler		" show the cursor position all the time
 set number 		" show line numbers
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
+set showmatch		" show matching brackets
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
