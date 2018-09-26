@@ -14,20 +14,19 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'powerline/powerline-fonts'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mattn/emmet-vim'
+Plugin 'chriskempson/base16-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
 " Airline 
-let g:airline_theme='solarized'
+let g:airline_theme='base16_ocean'
 let g:airline_powerline_fonts = 1
 
-" Solarized
-set background=dark
-colorscheme solarized
+" Theme
+colorscheme base16-ocean
 
 " Emmet settings
 let g:user_emmet_install_global = 0
