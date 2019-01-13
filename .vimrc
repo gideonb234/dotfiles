@@ -17,6 +17,8 @@ Plugin 'powerline/powerline-fonts'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mattn/emmet-vim'
 Plugin 'chriskempson/base16-vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'rust-lang/rust.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -31,6 +33,16 @@ colorscheme base16-ocean
 " Emmet settings
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
+
+" Syntactic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -49,17 +61,6 @@ filetype plugin indent on    " required
 "
 " Maintainer:	Bram Moolenaar <Bram@vim.org>
 " Last change:	2015 Mar 24
-"
-" To use it, copy it to
-"     for Unix and OS/2:  ~/.vimrc
-"	      for Amiga:  s:.vimrc
-"  for MS-DOS and Win32:  $VIM\_vimrc
-"	    for OpenVMS:  sys$login:.vimrc
-
-" When started as "evim", evim.vim will already have done these settings.
-if v:progname =~? "evim"
-  finish
-endif
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
