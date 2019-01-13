@@ -74,7 +74,7 @@ alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH="/usr/local/sbin:/Users/llama/.cargo/bin:$PATH"
 alias vimconfig="vim ~/.vimrc"
-alias copyconf="cp ~/.vimrc ~/Code/dotfiles/ && cp ~/.zshrc ~/Code/dotfiles"
+alias copyconf="cp ~/{.vimrc,.zshrc,.spacemacs} ~/Code/dotfiles/"
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator load ram)

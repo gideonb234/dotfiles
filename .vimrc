@@ -17,8 +17,6 @@ Plugin 'powerline/powerline-fonts'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mattn/emmet-vim'
 Plugin 'chriskempson/base16-vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'rust-lang/rust.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -33,16 +31,6 @@ colorscheme base16-ocean
 " Emmet settings
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
-
-" Syntactic settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
