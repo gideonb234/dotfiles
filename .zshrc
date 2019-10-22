@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/llama/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -53,10 +53,8 @@ plugins=(git composer osx)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/llama/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
-
-source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -72,9 +70,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH="/usr/local/sbin:/Users/llama/.cargo/bin:$PATH"
+export PATH="/usr/local/sbin:$HOME/.cargo/bin:$PATH"
 alias vimconfig="vim ~/.vimrc"
-alias copyconf="cp ~/{.vimrc,.zshrc,.spacemacs} ~/Code/dotfiles/"
+alias copyconf="cp ~/{.vimrc,.zshrc} ~/code/dotfiles/"
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator load ram)
@@ -82,3 +80,6 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator load ram)
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+source $ZSH/oh-my-zsh.sh
+
